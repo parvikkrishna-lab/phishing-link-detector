@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Link Detector</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <h1><i class="ti ti-link"></i> Phishing link detector</h1>
+      <p>Paste any link to check if it's a fake website impersonating a brand.</p>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="url-input" placeholder="https://example.com/login" />
+      <button class="btn btn-primary" onclick="scan()">
+        <i class="ti ti-shield-search"></i> Scan
+      </button>
+      <button class="btn btn-ghost" onclick="clearAll()">Clear</button>
+    </div>
+
+    <div class="examples">
+      <p class="ex-label">TRY AN EXAMPLE</p>
+      <div class="pills">
+        <span class="pill" onclick="load('http://instagram-login.verify-account.tk/auth')">Fake Instagram</span>
+        <span class="pill" onclick="load('https://faceb00k-secure.com/login?ref=reset')">Fake Facebook</span>
+        <span class="pill" onclick="load('http://paypa1.com/account/verify')">Fake PayPal</span>
+        <span class="pill" onclick="load('https://amazon-security-alert.xyz/signin')">Fake Amazon</span>
+        <span class="pill" onclick="load('https://netf1ix-billing.com/update')">Fake Netflix</span>
+        <span class="pill" onclick="load('https://whatsapp-verify.ml/confirm')">Fake WhatsApp</span>
+        <span class="pill" onclick="load('https://www.instagram.com/login')">Real Instagram</span>
+        <span class="pill" onclick="load('https://www.paypal.com/signin')">Real PayPal</span>
+        <span class="pill" onclick="load('https://www.amazon.com')">Real Amazon</span>
+      </div>
+    </div>
+
+    <div id="result"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
